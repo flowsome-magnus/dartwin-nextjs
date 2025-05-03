@@ -34,3 +34,11 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Development and Testing Scripts
+
+- `npm run dev` — Fast dev with Turbopack (no Babel, no Jest transforms)
+- `npm run dev:babel` — Classic Next.js dev with Babel (for Jest/test compatibility)
+- `npm test` — Run tests (uses Babel)
+
+Use `dev:babel` if you need to run tests or use Babel transforms. Use `dev` for fastest development experience.

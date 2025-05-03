@@ -3,6 +3,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { createClient } from '@/utils/supabase/client'
 import { type User } from '@supabase/supabase-js'
 import Button from '../components/Button'
+import Avatar from './avatar'
 
 // ...
 
@@ -85,7 +86,15 @@ export default function AccountForm({ user }: { user: User | null }) {
             Update your account information and profile details
           </p>
         </div>
-
+        <Avatar
+        uid={user?.id ?? null}
+        url={avatar_url}
+        size={150}
+        onUpload={(url) => {
+          setAvatarUrl(url)
+          updateProfile({ fullname, username, website, avatar_url: url })
+        }}
+        />
         <div className="space-y-6">
           <div className="space-y-4">
             <div>
